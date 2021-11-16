@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/style.css"],"names":[],"mappings":"AAAA,2BACI,gBAAiB,CACjB,gBACJ","file":"main.bfe87baf.chunk.css","sourcesContent":[".ui.grid>.column:not(.row) {\n    padding-top: 1rem;\n    padding-bottom: 0;\n}"]}
