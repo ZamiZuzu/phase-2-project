@@ -6,6 +6,8 @@ import TopReturn from './TopReturn' ;
 
 function App() {
   const [artData, setArtData] = useState([]);
+  const [artInfo, setArtInfo] = useState([]);
+  const [artRecords, setArtRecords] = useState([]);
 
   useEffect(() => {
     fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
@@ -13,6 +15,8 @@ function App() {
       .then(data => {
         console.log(data)
         setArtData(data);
+        setArtInfo(data.info)
+        setArtRecords(data.records)
       });
   }, []);
 
@@ -30,8 +34,12 @@ function App() {
     <div style={{ textAlign: "center" }}>
       <h1>Harvard Art Museums</h1>
       <Filter handleFilterSelection={handleFilterSelection} setArtData={setArtData} />
+<<<<<<< HEAD
       <CardContainer artData={artData} setArtData={setArtData} />
       <TopReturn/>
+=======
+      <CardContainer artData={artData} setArtData={setArtData} artInfo={artInfo} artRecords={artRecords} setArtRecords={setArtRecords} />
+>>>>>>> b0927b2d839ee10a3bee0adf38e2f5d57928c74c
     </div>
   )
 }

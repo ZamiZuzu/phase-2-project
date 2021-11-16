@@ -2,12 +2,15 @@ import React from 'react'
 import * as image from '../images/placeholder.png'
 
 function ObjectCard({ record }) {
+    // console.log(record.primaryimageurl)
+    // console.log(typeof record.primaryimageurl)
     if (record.primaryimageurl === undefined || record.primaryimageurl === null) record.primaryimageurl = image.default;
+    // if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
 
     return (
         <div className="ui card">
             <div className="image">
-                <img src={record.primaryimageurl} alt={record.title} />
+                <img src={record.primaryimageurl} alt={record.title + " image"} />
             </div>
             <div className="content">
                 <h3 className="header">{record.title}</h3>
