@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { API_KEY, BASE_URL } from "./API";
 
-function Filter({ handleFilterSelection, setArtData }) {
+function Filter({ handleCategoryChange }) {
     const [itemList, setItemList] = useState([]);
 
     function handleFilterClick(category) {
@@ -24,14 +24,14 @@ function Filter({ handleFilterSelection, setArtData }) {
         fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
             .then(res => res.json())
             .then(data => {
-                setArtData(data);
+                // setArtData(data);
                 setItemList([])
             });
     }
 
     const itemElements = itemList?.map(item => {
         // console.log(item)
-        return <div className="column" key={item.id} style={{ cursor: "pointer" }} onClick={() => handleFilterSelection(item.parentCategory, item.id, item.name, setItemList)}>{item?.name}</div>
+        return <div className="column" key={item.id} style={{ cursor: "pointer" }} onClick={() => handleCategoryChange(item.parentCategory, item.id, item.name)}>{item?.name}</div>
     })
 
 

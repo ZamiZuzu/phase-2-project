@@ -1,10 +1,6 @@
 import React from 'react'
-import * as image from '../images/placeholder.png'
 
 function ObjectCard({ record }) {
-    // console.log(record.primaryimageurl)
-    // console.log(typeof record.primaryimageurl)
-    if (record.primaryimageurl === undefined || record.primaryimageurl === null) record.primaryimageurl = image.default;
     // if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
 
     return (
