@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { API_KEY, BASE_URL } from "./API";
 
-function Filter() {
+function Filter({ handleFilterSelection, setArtData }) {
     const [itemList, setItemList] = useState([]);
 
     function handleFilterClick(category) {
@@ -10,6 +10,9 @@ function Filter() {
             .then(res => res.json())
             .then(data => {
                 const unsortedList = data.records;
+                unsortedList.forEach(item => {
+                    item.parentCategory = category;
+                })
                 const sortedList = unsortedList.sort((a, b) => {
                     return a.name.localeCompare(b.name);
                 });
@@ -17,23 +20,28 @@ function Filter() {
             });
     }
 
-    const itemElements = itemList?.map(category => {
-        return <div className="column" key={category.id}>{category?.name}</div>
+    function resetItems() {
+        fetch(`${BASE_URL}/object?hasimage=1&size=15&apikey=${API_KEY}`)
+            .then(res => res.json())
+            .then(data => {
+                setArtData(data);
+            });
+    }
+
+    const itemElements = itemList?.map(item => {
+        // console.log(item)
+        return <div className="column" key={item.id} onClick={() => handleFilterSelection(item.parentCategory, item.id, item.name, setItemList)}>{item?.name}</div>
     })
 
 
     return (
         <>
             <div class="ui buttons">
-                <button class="ui button" name="object">All Objects</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="classification">Classification</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="worktype">Work Type</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="technique">Technique / Medium</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="period">Period</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="place">Place</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="century">Century</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="culture">Culture</button>
-                <button class="ui button" onClick={e => handleFilterClick(e.target.name)} name="gallery">Gallery</button>
+                <button className="ui button" onClick={resetItems} name="object">All Objects</button>
+                <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="classification">Classification</button>
+                <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="century">Century</button>
+                <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="gallery">Gallery</button>
+                <button className="ui button" name="">Favorites</button>
             </div>
             <div className="ui four column grid">
                 {itemElements ? itemElements : null}
