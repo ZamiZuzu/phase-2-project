@@ -25,7 +25,7 @@ function CardContainer({ artData, setArtData }) {
     return (
         <div>
             <br />
-            <h2 className="ui header"><em>Showing {artData?.info?.totalrecords} Works</em></h2>
+            <h2 className="ui header"><em>Showing {artData?.records?.length} of {artData?.info?.totalrecords} Works</em></h2>
             <div className="ui four cards">
                 {artElements}
             </div>
