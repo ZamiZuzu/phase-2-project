@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import CardContainer from './CardContainer';
 import Filter from './Filter';
@@ -8,7 +7,7 @@ function App() {
   const [artData, setArtData] = useState([]);
 
   useEffect(() => {
-    fetch(`${BASE_URL}/object?hasimage=1&size=15&apikey=${API_KEY}`)
+    fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
       .then(res => res.json())
       .then(data => {
         setArtData(data);
@@ -17,7 +16,7 @@ function App() {
 
   function handleFilterSelection(category, id, name, setItemList) {
     console.log(category, id)
-    fetch(`${BASE_URL}/object?${category}=${category === 'century' ? name : id}&size=15&apikey=${API_KEY}`)
+    fetch(`${BASE_URL}/object?${category}=${category === 'century' ? name : id}&size=16&apikey=${API_KEY}`)
       .then(res => res.json())
       .then(data => {
         console.log(data)

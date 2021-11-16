@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { API_KEY, BASE_URL } from './API';
-// import CardContainer from './CardContainer';
+import React from 'react'
 import ObjectCard from './ObjectCard';
 
 function CardContainer({ artData, setArtData }) {
-
     function handleNext(url) {
         fetch(url)
             .then(res => res.json())
@@ -21,24 +18,19 @@ function CardContainer({ artData, setArtData }) {
     }
 
     const artElements = artData?.records?.map(record => {
-        // return <p key={record.objectid}>{record?.primaryimageurl ? <img alt="image" src={record?.primaryimageurl} width={"300px"}></img> : null}</p>
+        console.log(record.title)
         return <ObjectCard key={record.id} record={record} />
     })
-    // console.log(artData)
-
 
     return (
         <div>
             <br />
             <h2 className="ui header"><em>Showing {artData?.info?.totalrecords} Works</em></h2>
-            <button className="ui primary button" onClick={() => handlePrevious(artData?.info?.next)}>Previous</button>
-            <button className="ui primary button" onClick={() => handleNext(artData?.info?.next)}>Next</button>
-
-            {/* <h2>{JSON.stringify(artData.info)}</h2> */}
             <div className="ui four cards">
                 {artElements}
             </div>
-            {/* <CardContainer /> */}
+            <button className="ui primary button" onClick={() => handlePrevious(artData?.info?.next)}>Previous</button>
+            <button className="ui primary button" onClick={() => handleNext(artData?.info?.next)} style={{ marginTop: "15px" }}>Next</button>
         </div>
     )
 }
