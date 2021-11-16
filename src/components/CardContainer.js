@@ -18,7 +18,7 @@ function CardContainer({ artData, setArtData }) {
     }
 
     const artElements = artData?.records?.map(record => {
-        console.log(record.title)
+        // console.log(record.title)
         return <ObjectCard key={record.id} record={record} />
     })
 
