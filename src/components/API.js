@@ -3,6 +3,7 @@
 //
 // Request Structure:
 // https://api.harvardartmuseums.org/RESOURCE_TYPE?apikey=YOUR_API_KEY
+// fetch(`${BASE_URL}/object?size=1&yearmade=2002&hasimage=1&apikey=${API_KEY}`)
 //
 // AVAILABLE RESOURCES:
 // Object

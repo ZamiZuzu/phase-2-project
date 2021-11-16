@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import {API_KEY, BASE_URL} from "./API.js";
+import { API_KEY, BASE_URL } from './API';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [artObjects, setArtObjects] = useState([]);
 
   useEffect(() => {
-    fetch(`${BASE_URL}/object?period=5135&size=483&apikey=${API_KEY}`)
+    fetch(`${BASE_URL}/object?size=1&yearmade=2002&hasimage=1&apikey=${API_KEY}`)
       .then(res => res.json())
       .then(data => {
-        setArtObjects(data);
+        setArtObjects(data.records);
       });
   }, []);
 
@@ -16,9 +16,7 @@ function App() {
 
   return (
     <div>
-      <h1>Harvard Art</h1>
-      <h2></h2>
-      <img src={artObjects.primaryimageurl}/>
+      <h1>Harvard Art Museums</h1>
     </div>
   )
 }
