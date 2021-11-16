@@ -34,12 +34,8 @@ function App() {
     <div style={{ textAlign: "center" }}>
       <h1>Harvard Art Museums</h1>
       <Filter handleFilterSelection={handleFilterSelection} setArtData={setArtData} />
-<<<<<<< HEAD
-      <CardContainer artData={artData} setArtData={setArtData} />
-      <TopReturn/>
-=======
       <CardContainer artData={artData} setArtData={setArtData} artInfo={artInfo} artRecords={artRecords} setArtRecords={setArtRecords} />
->>>>>>> b0927b2d839ee10a3bee0adf38e2f5d57928c74c
+      <TopReturn/>
     </div>
   )
 }

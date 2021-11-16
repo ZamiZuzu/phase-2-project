@@ -21,12 +21,8 @@ function CardContainer({ artData, setArtData, artInfo, artRecords, setArtRecords
             .then(data => setArtData(data))
     }
 
-<<<<<<< HEAD
-    const artElements = artData?.records?.map(record => {
-=======
     const artElements = artRecords?.map(record => {
         // console.log(record.title)
->>>>>>> b0927b2d839ee10a3bee0adf38e2f5d57928c74c
         return <ObjectCard key={record.id} record={record} />
     })
 
