@@ -1,22 +1,36 @@
-import { API_KEY, BASE_URL } from './API';
+
 import { useState, useEffect } from 'react';
+import CardContainer from './CardContainer';
+import Filter from './Filter';
+import { API_KEY, BASE_URL } from './API';
 
 function App() {
-  const [artObjects, setArtObjects] = useState([]);
+  const [artData, setArtData] = useState([]);
 
   useEffect(() => {
-    fetch(`${BASE_URL}/object?size=1&yearmade=2002&hasimage=1&apikey=${API_KEY}`)
+    fetch(`${BASE_URL}/object?hasimage=1&size=15&apikey=${API_KEY}`)
       .then(res => res.json())
       .then(data => {
-        setArtObjects(data.records);
+        setArtData(data);
       });
   }, []);
 
-  console.log(artObjects);
+  function handleFilterSelection(category, id, name, setItemList) {
+    console.log(category, id)
+    fetch(`${BASE_URL}/object?${category}=${category === 'century' ? name : id}&size=15&apikey=${API_KEY}`)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        setArtData(data);
+        setItemList([])
+      })
+  }
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <h1>Harvard Art Museums</h1>
+      <Filter handleFilterSelection={handleFilterSelection} setArtData={setArtData} />
+      <CardContainer artData={artData} setArtData={setArtData} />
     </div>
   )
 }
