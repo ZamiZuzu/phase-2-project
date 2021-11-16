@@ -21,16 +21,17 @@ function Filter({ handleFilterSelection, setArtData }) {
     }
 
     function resetItems() {
-        fetch(`${BASE_URL}/object?hasimage=1&size=15&apikey=${API_KEY}`)
+        fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 setArtData(data);
+                setItemList([])
             });
     }
 
     const itemElements = itemList?.map(item => {
         // console.log(item)
-        return <div className="column" key={item.id} onClick={() => handleFilterSelection(item.parentCategory, item.id, item.name, setItemList)}>{item?.name}</div>
+        return <div className="column" key={item.id} style={{ cursor: "pointer" }} onClick={() => handleFilterSelection(item.parentCategory, item.id, item.name, setItemList)}>{item?.name}</div>
     })
 
 

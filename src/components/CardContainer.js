@@ -31,13 +31,12 @@ function CardContainer({ artData, setArtData }) {
         <div>
             <br />
             <h2 className="ui header"><em>Showing {artData?.info?.totalrecords} Works</em></h2>
-            <button className="ui primary button" onClick={() => handlePrevious(artData?.info?.next)}>Previous</button>
-            <button className="ui primary button" onClick={() => handleNext(artData?.info?.next)}>Next</button>
-
             {/* <h2>{JSON.stringify(artData.info)}</h2> */}
             <div className="ui four cards">
                 {artElements}
             </div>
+            <button className="ui primary button" onClick={() => handlePrevious(artData?.info?.next)}>Previous</button>
+            <button className="ui primary button" onClick={() => handleNext(artData?.info?.next)} style={{ marginTop: "15px" }}>Next</button>
             {/* <CardContainer /> */}
         </div>
     )
