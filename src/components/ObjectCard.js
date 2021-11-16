@@ -5,6 +5,7 @@ function ObjectCard({ record }) {
     // console.log(record.primaryimageurl)
     // console.log(typeof record.primaryimageurl)
     if (record.primaryimageurl === undefined || record.primaryimageurl === null) record.primaryimageurl = image.default;
+    // if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
 
     return (
         <div className="ui card">
