@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import CardContainer from './CardContainer';
 import Filter from './Filter';
 import { API_KEY, BASE_URL } from './API';
+import TopReturn from './TopReturn' ;
 
 function App() {
   const [artData, setArtData] = useState([]);
@@ -30,10 +31,7 @@ function App() {
       <h1>Harvard Art Museums</h1>
       <Filter handleFilterSelection={handleFilterSelection} setArtData={setArtData} />
       <CardContainer artData={artData} setArtData={setArtData} />
-      <button className="ui icon button" onClick={() => window.scroll({top: 0, left: 0, behavior: 'smooth'})}>
-        <i className="up arrow icon"></i>
-        Top of Page
-      </button>
+      <TopReturn/>
     </div>
   )
 }
