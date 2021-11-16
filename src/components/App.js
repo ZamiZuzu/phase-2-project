@@ -11,12 +11,12 @@ function App() {
     fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         setArtData(data);
       });
   }, []);
 
   function handleFilterSelection(category, id, name, setItemList) {
-    console.log(category, id)
     fetch(`${BASE_URL}/object?${category}=${category === 'century' ? name : id}&size=16&apikey=${API_KEY}`)
       .then(res => res.json())
       .then(data => {
@@ -37,3 +37,5 @@ function App() {
 }
 
 export default App;
+
+//`${BASE_URL}/object?hasimage=1&keyword=${SEARCH_STRING}&size=100&apikey=${API_KEY}`

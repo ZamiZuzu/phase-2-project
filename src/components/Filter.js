@@ -37,7 +37,7 @@ function Filter({ handleFilterSelection, setArtData }) {
 
     return (
         <>
-            <div class="ui buttons">
+            <div className="ui buttons">
                 <button className="ui button" onClick={resetItems} name="object">All Objects</button>
                 <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="classification">Classification</button>
                 <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="century">Century</button>
