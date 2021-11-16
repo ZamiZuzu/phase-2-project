@@ -1,0 +1,4 @@
+.ui.grid>.column:not(.row) {
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
