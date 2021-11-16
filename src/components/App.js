@@ -30,6 +30,10 @@ function App() {
       <h1>Harvard Art Museums</h1>
       <Filter handleFilterSelection={handleFilterSelection} setArtData={setArtData} />
       <CardContainer artData={artData} setArtData={setArtData} />
+      <button className="ui icon button" onClick={() => window.scroll({top: 0, left: 0, behavior: 'smooth'})}>
+        <i className="up arrow icon"></i>
+        Top of Page
+      </button>
     </div>
   )
 }
