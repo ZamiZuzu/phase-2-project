@@ -1,15 +1,18 @@
-function DetailDisplay({record}) {
+function DetailDisplay({record:{primaryimageurl, title, description, classification, dated = "Unknown", objectnumber}}) {
+
     return (
-        <div className="ui card" id="detailDisplay">
-            <div className="image">
-                <img src={record.primaryimageurl} alt={record.title + " image"} />
-            </div>
-            <div className="content">
-                <h3 className="header">{record.title}</h3>
-                <div className="description">{record.description}</div>
-                <div className="classification"><strong>Classification:</strong> {record.classification}</div>
-                <div className="date"><strong>Date:</strong> {record.date}</div>
-                <div className="objectnumber"><strong>Object Number:</strong> {record.objectnumber}</div>
+        <div >
+            <div className="ui centered card" id="detailDisplay">
+                <div className="image">
+                    <img src={primaryimageurl} alt={title + " image"} />
+                </div>
+                <div className="content">
+                    <h3 className="header">{title}</h3>
+                    <div className="description">{description}</div>
+                    <div className="classification"><strong>Classification:</strong> {classification}</div>
+                    <div className="date"><strong>Date:</strong> {dated}</div>
+                    <div className="objectnumber"><strong>Object Number:</strong> {objectnumber}</div>
+                </div>
             </div>
         </div>
     )
