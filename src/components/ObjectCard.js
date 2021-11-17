@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavorite, handleRemoveFavorite }) {
+function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavorite, handleRemoveFavorite, handleSetCurrentSelection }) {
     if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
 
     function FavoriteButton() {
@@ -26,7 +26,7 @@ function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavor
 
     return (
         <div className="ui card">
-            <div className="image">
+            <div className="image" onClick={() => handleSetCurrentSelection(record)}>
                 <img src={record.primaryimageurl} alt={record.title + " image"} />
             </div>
             <div className="content">
@@ -34,12 +34,6 @@ function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavor
                 <div className="objectnumber"><strong>Object Number:</strong> {record.objectnumber}</div>
                 <div className="description">{record.classification}</div>
             </div>
-            {/* {databaseConnected
-                ? <div className="ui bottom attached button" onClick={(e) => handleAddFavorite(e, record)}>
-                    <i className="add icon"></i>
-                    Add Favorite
-                </div>
-                : null} */}
             <FavoriteButton />
         </div>
 

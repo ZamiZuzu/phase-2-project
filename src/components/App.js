@@ -3,6 +3,7 @@ import { API_KEY, BASE_URL } from './API';
 import CardContainer from './CardContainer';
 import Filter from './Filter';
 import TopReturn from './TopReturn';
+import DetailDisplay from './DetailDisplay';
 import Header from './Header';
 const DB_URL = 'http://localhost:3000/saved_items'
 
@@ -14,6 +15,7 @@ function App() {
   const [itemList, setItemList] = useState([]);
   const [databaseConnected, setDatabaseConnected] = useState(false);
   const [databaseRecords, setDatabaseRecords] = useState([])
+  const [currentSelection, setCurrentSelection] = useState(null);
 
   useEffect(() => {
     fetch(DB_URL)
@@ -142,6 +144,10 @@ function App() {
       })
   }
 
+  function handleSetCurrentSelection(record) {
+    setCurrentSelection(record)
+  }
+
   const visibleRecords = artRecords.slice(0, visible)
 
   return (
@@ -155,6 +161,8 @@ function App() {
         handleKeywordSearch={handleKeywordSearch}
         handleDisplayFavorites={handleDisplayFavorites}
       />
+      <br />
+      <DetailDisplay record={currentSelection} />
       <CardContainer
         artInfo={artInfo}
         artRecords={visibleRecords}
@@ -163,6 +171,7 @@ function App() {
         databaseRecords={databaseRecords}
         handleAddFavorite={handleAddFavorite}
         handleRemoveFavorite={handleRemoveFavorite}
+        handleSetCurrentSelection={handleSetCurrentSelection}
       />
       <TopReturn />
     </div>

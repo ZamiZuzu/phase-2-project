@@ -1,4 +1,6 @@
-function DetailDisplay({record:{primaryimageurl, title, description, classification, dated = "Unknown", objectnumber}}) {
+function DetailDisplay({ record }) {
+    if (!record) return null;
+    const { primaryimageurl, title, description, classification, dated = "Unknown", objectnumber } = record;
 
     return (
         <div >
@@ -19,10 +21,3 @@ function DetailDisplay({record:{primaryimageurl, title, description, classificat
 }
 
 export default DetailDisplay
-
-// image
-// title 
-// description
-// classification 
-// date 
-// object number 
