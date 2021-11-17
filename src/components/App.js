@@ -87,10 +87,9 @@ function App() {
       .then(data => {
         const workingRecords =
           data.records.filter(
-            record => record.primaryimageurl !== null && record.primaryimageurl !== undefined
+            record => record.primaryimageurl !== null
           );
-        const newData = [...artRecords, ...workingRecords]
-        setArtRecords(data.records);
+        setArtRecords(workingRecords);
         setArtInfo(data.info)
         setVisible(() => incrementVisible)
       })
