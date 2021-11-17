@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, handleKeywordSearch }) {
+function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, handleKeywordSearch, handleDisplayFavorites }) {
     const [activeBtn, setActiveBtn] = useState("object")
     const [search, setSearch] = useState("")
 
@@ -17,7 +17,7 @@ function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList,
         const selection = e.target.name;
         if (selection === "object") resetItems()
         else if (selection === "search") return handleKeywordSearch(search)
-        else if (selection === "favorites") console.log("FAVORITES - NOT IMPLEMENTED")
+        else if (selection === "favorites") return handleDisplayFavorites()
         else handleFilterClick(selection)
         setActiveBtn(() => selection)
         setSearch(() => "")

@@ -130,6 +130,16 @@ function App() {
     // console.log(data)
   }
 
+  function handleDisplayFavorites() {
+    Promise.all(databaseRecords.map(id => fetch(`${BASE_URL}/object/${id}?apikey=${API_KEY}`)))
+      .then(responses => Promise.all(responses.map(res => res.json())))
+      .then(data => {
+        const records = data.map(item => item)
+        console.log(records)
+        setArtRecords(records)
+        setVisible(() => incrementVisible)
+      })
+  }
 
   const visibleRecords = artRecords.slice(0, visible)
 
@@ -142,6 +152,7 @@ function App() {
         resetItems={resetItems}
         itemList={itemList}
         handleKeywordSearch={handleKeywordSearch}
+        handleDisplayFavorites={handleDisplayFavorites}
       />
       <CardContainer
         artInfo={artInfo}

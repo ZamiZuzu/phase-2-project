@@ -1,3 +1,744 @@
 {
-  "saved_items": []
+  "saved_items": [
+    {
+      "copyright": null,
+      "contextualtextcount": 1,
+      "creditline": "Harvard Art Museums/Arthur M. Sackler Museum, Gift of the Misses Norton",
+      "accesslevel": 1,
+      "dateoflastpageview": "2021-10-19",
+      "classificationid": 32,
+      "division": "Asian and Mediterranean Art",
+      "markscount": 0,
+      "publicationcount": 0,
+      "totaluniquepageviews": 74,
+      "contact": "am_asianmediterranean@harvard.edu",
+      "colorcount": 10,
+      "rank": 51895,
+      "details": {
+        "technical": [
+          {
+            "text": "ICP-MS/AAA data from sample, Bronze:\r\nCu, 78.23; Sn, 18.57; Pb, 1.8; Zn, 0.09; Fe, 0.14; Ni, 0.53; Ag, 0.14; Sb, 0.19; As, 0.31; Bi, less than 0.025; Co, less than 0.005; Au, less than 0.01; Cd, less than 0.001\r\n\r\nJ. Riederer",
+            "formattedtext": "<P><SPAN style=\"FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA\"><SPAN style=\"FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA\">ICP-MS/AAA data from sample, </SPAN>Bronze:</SPAN></P>\r\n<P><SPAN style=\"FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA\">Cu, <SPAN style=\"mso-no-proof: yes\">78.23</SPAN>; Sn, <SPAN style=\"mso-no-proof: yes\">18.57</SPAN>; Pb, <SPAN style=\"mso-no-proof: yes\">1.8</SPAN>; Zn, <SPAN style=\"mso-no-proof: yes\">0.09</SPAN>; Fe, <SPAN style=\"mso-no-proof: yes\">0.14</SPAN>; Ni, <SPAN style=\"mso-no-proof: yes\">0.53</SPAN>; Ag, <SPAN style=\"mso-no-proof: yes\">0.14</SPAN>; Sb, <SPAN style=\"mso-no-proof: yes\">0.19</SPAN>; As, <SPAN style=\"mso-no-proof: yes\">0.31</SPAN>; Bi, <SPAN style=\"mso-no-proof: yes\">less than 0.025</SPAN>; Co, <SPAN style=\"mso-no-proof: yes\">less than 0.005</SPAN>; Au, <SPAN style=\"mso-no-proof: yes\">less than 0.01</SPAN>; Cd, less than 0.001</SPAN></P>\r\n<P><SPAN style=\"FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA\"></SPAN>&nbsp;</P>\r\n<P><SPAN style=\"FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA\"></SPAN><SPAN style=\"FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA\">J. Riederer</SPAN></P>",
+            "type": "Chemical Composition"
+          },
+          {
+            "text": "XRF data from Tracer\r\nAlloy: Bronze\r\nAlloying Elements: copper, tin\r\nOther Elements: lead, iron, silver, antimony\r\n\r\nK. Eremin, January 2014",
+            "formattedtext": "<P class=MsoNormal style=\"MARGIN: 0in 0in 0pt\"><SPAN style=\"mso-ascii-font-family: 'Times New Roman'; mso-ascii-theme-font: major-bidi; mso-hansi-font-family: 'Times New Roman'; mso-hansi-theme-font: major-bidi; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: major-bidi\"><FONT size=3><FONT face=\"Times New Roman\">XRF data from <SPAN style=\"mso-no-proof: yes\">Tracer</SPAN><?xml:namespace prefix = \"o\" ns = \"urn:schemas-microsoft-com:office:office\" /><o:p></o:p></FONT></FONT></SPAN></P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 0pt\"><SPAN style=\"mso-ascii-font-family: 'Times New Roman'; mso-ascii-theme-font: major-bidi; mso-hansi-font-family: 'Times New Roman'; mso-hansi-theme-font: major-bidi; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: major-bidi\"><FONT size=3><FONT face=\"Times New Roman\">Alloy: <SPAN style=\"mso-no-proof: yes\">Bronze</SPAN><o:p></o:p></FONT></FONT></SPAN></P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 0pt\"><SPAN style=\"mso-ascii-font-family: 'Times New Roman'; mso-ascii-theme-font: major-bidi; mso-hansi-font-family: 'Times New Roman'; mso-hansi-theme-font: major-bidi; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: major-bidi\"><FONT size=3><FONT face=\"Times New Roman\">Alloying Elements: <SPAN style=\"mso-no-proof: yes\">copper, tin</SPAN><o:p></o:p></FONT></FONT></SPAN></P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 0pt\"><SPAN style=\"mso-ascii-font-family: 'Times New Roman'; mso-ascii-theme-font: major-bidi; mso-hansi-font-family: 'Times New Roman'; mso-hansi-theme-font: major-bidi; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: major-bidi\"><FONT size=3><FONT face=\"Times New Roman\">Other Elements: <SPAN style=\"mso-no-proof: yes\">lead, iron, silver, antimony</SPAN></FONT></FONT></SPAN></P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 0pt\"><SPAN style=\"mso-ascii-font-family: 'Times New Roman'; mso-ascii-theme-font: major-bidi; mso-hansi-font-family: 'Times New Roman'; mso-hansi-theme-font: major-bidi; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: major-bidi\"><FONT size=3><FONT face=\"Times New Roman\"><SPAN style=\"mso-no-proof: yes\"></SPAN><o:p></o:p></FONT></FONT></SPAN>&nbsp;</P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 0pt\"><SPAN style=\"mso-ascii-font-family: 'Times New Roman'; mso-ascii-theme-font: major-bidi; mso-hansi-font-family: 'Times New Roman'; mso-hansi-theme-font: major-bidi; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: major-bidi; mso-no-proof: yes\"><FONT size=3 face=\"Times New Roman\">K. Eremin, January 2014</FONT></SPAN><SPAN style=\"mso-ascii-font-family: 'Times New Roman'; mso-ascii-theme-font: major-bidi; mso-hansi-font-family: 'Times New Roman'; mso-hansi-theme-font: major-bidi; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: major-bidi\"><o:p></o:p></SPAN></P>",
+            "type": "Chemical Composition"
+          },
+          {
+            "text": "This object was cast by the lost-wax process. Because the top is thicker-walled than the sides, it looks as if metal had pooled at the bottom of the upturned shape. This probably accounts for the fact that the object does not produce a ring. Much of the relief decoration revealed by x-radiography is hidden by surface accretions, although traces of the textured bands are visible on the cleaned portions of the outer surface. Cone-shaped elements stand proud of the inner surface and in some cases protrude beyond the bottom edge of the rim, again more easily visible in the x-radiographs. These could be sprue-ends, that is, the remains of the casting process, but the small, regular intervals between them and the size of the object suggest that they served a decorative or functional purpose. Thick layers of green and red corrosion cover most of the surface.\r\n \r\n \r\nFrancesca G. Bewer",
+            "formattedtext": "<P class=MsoNormal style=\"MARGIN: 0in 0in 3pt\"><FONT size=3 face=\"Times New Roman\">This object was cast by the lost-wax process. Because the top is thicker-walled than the sides, it looks as if metal had pooled at the bottom of the upturned shape. This probably accounts for the fact that the object does not produce a ring. Much of the relief decoration <SPAN style=\"COLOR: black\">revealed by x-radiography is hidden by surface accretions, although traces of the textured bands are visible on the cleaned portions of the outer surface.</SPAN> Cone-shaped elements <SPAN style=\"COLOR: black\">stand proud of the inner surface and in some cases protrude beyond the bottom edge of the rim, again more easily visible in the x-radiographs. These could be sprue-ends, that is, the remains of the casting process, but the small, regular intervals between them and the size of the object suggest that they served a decorative or functional purpose. </SPAN>Thick layers of green and red corrosion cover most of the surface.</FONT></P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 3pt\"><?xml:namespace prefix = \"o\" ns = \"urn:schemas-microsoft-com:office:office\" /><o:p><FONT size=3 face=\"Times New Roman\">&nbsp;</FONT></o:p></P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 3pt\"><o:p><FONT size=3 face=\"Times New Roman\">&nbsp;</FONT></o:p></P>\r\n<P class=MsoNormal style=\"MARGIN: 0in 0in 3pt\"><FONT size=3 face=\"Times New Roman\">Francesca G. Bewer</FONT></P>",
+            "type": "Technical Observations"
+          }
+        ]
+      },
+      "state": null,
+      "id": 303748,
+      "verificationleveldescription": "Best. Object is extensively researched, well described and information is vetted",
+      "period": "Roman period",
+      "images": [
+        {
+          "date": "2012",
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 428173,
+          "idsid": 46473556,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": "Camera: Phase One P20, Norman Flash",
+          "renditionnumber": "LEG251164",
+          "displayorder": 1,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:LEG251164_dynmc",
+          "alttext": null,
+          "width": 1024,
+          "publiccaption": null,
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/46473556",
+          "height": 923
+        },
+        {
+          "date": "2014-06-05",
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 440768,
+          "idsid": 400097557,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": null,
+          "renditionnumber": "LEG252719",
+          "displayorder": 2,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:LEG252719",
+          "alttext": null,
+          "width": 2450,
+          "publiccaption": "Drawing by Catherine S. Alexander",
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/400097557",
+          "height": 1368
+        },
+        {
+          "date": "2014-06-12",
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 441454,
+          "idsid": 404822367,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": null,
+          "renditionnumber": "STR017735",
+          "displayorder": 3,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:STR017735",
+          "alttext": null,
+          "width": 1024,
+          "publiccaption": null,
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/404822367",
+          "height": 904
+        },
+        {
+          "date": null,
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 79827,
+          "idsid": 43163063,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": null,
+          "renditionnumber": "LEG5077",
+          "displayorder": 4,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:LEG5077_dynmc",
+          "alttext": null,
+          "width": 1024,
+          "publiccaption": null,
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/43163063",
+          "height": 843
+        }
+      ],
+      "imagecount": 4,
+      "totalpageviews": 93,
+      "accessionyear": 1920,
+      "standardreferencenumber": null,
+      "signed": null,
+      "classification": "Tools and Equipment",
+      "relatedcount": 0,
+      "verificationlevel": 4,
+      "primaryimageurl": "https://nrs.harvard.edu/urn-3:HUAM:LEG251164_dynmc",
+      "titlescount": 2,
+      "peoplecount": 0,
+      "style": null,
+      "lastupdate": "2021-11-17T04:27:29-0500",
+      "commentary": null,
+      "periodid": 602,
+      "technique": "Cast, lost-wax process",
+      "edition": null,
+      "description": null,
+      "medium": "Bronze",
+      "lendingpermissionlevel": 0,
+      "title": "Lid or Bell",
+      "accessionmethod": "Gift",
+      "colors": [
+        {
+          "color": "#fafafa",
+          "spectrum": "#955ba5",
+          "hue": "White",
+          "percent": 0.6631604938271605,
+          "css3": "#fffafa"
+        },
+        {
+          "color": "#646464",
+          "spectrum": "#7866ad",
+          "hue": "Grey",
+          "percent": 0.10804938271604939,
+          "css3": "#696969"
+        },
+        {
+          "color": "#4b4b4b",
+          "spectrum": "#3db657",
+          "hue": "Grey",
+          "percent": 0.08977777777777778,
+          "css3": "#2f4f4f"
+        },
+        {
+          "color": "#7d7d64",
+          "spectrum": "#6cbd45",
+          "hue": "Yellow",
+          "percent": 0.08474074074074074,
+          "css3": "#808080"
+        },
+        {
+          "color": "#96967d",
+          "spectrum": "#8e5ea7",
+          "hue": "Green",
+          "percent": 0.02854320987654321,
+          "css3": "#808080"
+        },
+        {
+          "color": "#323232",
+          "spectrum": "#2eb45d",
+          "hue": "Grey",
+          "percent": 0.0094320987654321,
+          "css3": "#2f4f4f"
+        },
+        {
+          "color": "#afc8c8",
+          "spectrum": "#8761aa",
+          "hue": "Green",
+          "percent": 0.007901234567901235,
+          "css3": "#c0c0c0"
+        },
+        {
+          "color": "#96afaf",
+          "spectrum": "#7b65ad",
+          "hue": "Blue",
+          "percent": 0.004740740740740741,
+          "css3": "#a9a9a9"
+        },
+        {
+          "color": "#afaf96",
+          "spectrum": "#8e5ea7",
+          "hue": "Green",
+          "percent": 0.0036049382716049384,
+          "css3": "#a9a9a9"
+        },
+        {
+          "color": "#4baf96",
+          "spectrum": "#33b55b",
+          "hue": "Green",
+          "percent": 0.00004938271604938271,
+          "css3": "#5f9ea0"
+        }
+      ],
+      "provenance": "Miss Elizabeth Gaskell Norton, Boston, MA and Miss Margaret Norton, Cambridge, MA (by 1920), gift; to the Fogg Art Museum, 1920.\r\n\r\nNote: The Misses Norton were daughters of Charles Elliot Norton (1827-1908).",
+      "groupcount": 1,
+      "dated": "mid 1st millennium BCE-mid 1st millennium CE",
+      "department": "Department of Ancient and Byzantine Art & Numismatics",
+      "dateend": 500,
+      "url": "https://www.harvardartmuseums.org/collections/object/303748",
+      "dateoffirstpageview": "2012-08-21",
+      "century": "1st millennium BCE-1st millenium CE",
+      "objectnumber": "1920.44.50",
+      "labeltext": null,
+      "datebegin": -500,
+      "culture": "Graeco-Roman",
+      "exhibitioncount": 0,
+      "imagepermissionlevel": 0,
+      "mediacount": 0,
+      "objectid": 303748,
+      "techniqueid": 1311,
+      "dimensions": "2.6 x 3.5 x 3.5 cm (1 x 1 3/8 x 1 3/8 in.)",
+      "seeAlso": [
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/303748",
+          "type": "IIIF Manifest",
+          "format": "application/json",
+          "profile": "http://iiif.io/api/presentation/2/context.json"
+        }
+      ]
+    },
+    {
+      "copyright": null,
+      "contextualtextcount": 0,
+      "creditline": "Harvard Art Museums/Arthur M. Sackler Museum, Gift of Katherine Burton Jones",
+      "accesslevel": 1,
+      "dateoflastpageview": "2021-10-08",
+      "classificationid": 26,
+      "division": "Asian and Mediterranean Art",
+      "markscount": 0,
+      "publicationcount": 0,
+      "totaluniquepageviews": 126,
+      "contact": "am_asianmediterranean@harvard.edu",
+      "colorcount": 10,
+      "rank": 133916,
+      "state": null,
+      "id": 330740,
+      "verificationleveldescription": "Good. Object is well described and information is vetted",
+      "period": null,
+      "images": [
+        {
+          "date": "2010-04-21",
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 373001,
+          "idsid": 15962488,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": null,
+          "renditionnumber": "DDC110756",
+          "displayorder": 1,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:DDC110756_dynmc",
+          "alttext": null,
+          "width": 799,
+          "publiccaption": null,
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/15962488",
+          "height": 1024
+        }
+      ],
+      "imagecount": 1,
+      "totalpageviews": 154,
+      "accessionyear": 2009,
+      "standardreferencenumber": null,
+      "signed": null,
+      "classification": "Paintings",
+      "relatedcount": 0,
+      "verificationlevel": 3,
+      "primaryimageurl": "https://nrs.harvard.edu/urn-3:HUAM:DDC110756_dynmc",
+      "titlescount": 1,
+      "peoplecount": 0,
+      "style": null,
+      "lastupdate": "2021-11-17T04:27:58-0500",
+      "commentary": null,
+      "periodid": null,
+      "technique": null,
+      "edition": null,
+      "description": "At the center of the image is a shrine with a life-size idol of Shrinathji, a form of the Hindu god Krishna, who himself is the eighth avatar of Vishnu. Shrinathji is depicted with his iconic dark blue skin and pose. He wears a crown topped with a large peacock fan; rings, a nose ring, bracelets, armlets, long strands of pearls that reach his ankles, a large, long garland that hits the floor, a wide orange and red skirt, and orange trousers. His left arm is raised about his head. He holds in his right hand a long-stemmed flower with two buds. Flanking the shrine on each side is a worshipper. A female worshipper stands on the right. She wears a blue dress with a yellow shawl that covers her head and runs down almost to the hem of her skirt. On the left is a male worshipper. He wears a red shirt with red trousers. The style in which the painting is executed, with the yellow and white dots, was a popular local idiom that also parallels textile patterns in the area of Nathadwara.",
+      "medium": "Pigment on cloth",
+      "lendingpermissionlevel": 0,
+      "title": "Shrinathji in a Shrine Flanked by Worshipers",
+      "accessionmethod": "Gift",
+      "colors": [
+        {
+          "color": "#646464",
+          "spectrum": "#7866ad",
+          "hue": "Grey",
+          "percent": 0.17413793103448275,
+          "css3": "#696969"
+        },
+        {
+          "color": "#7d7d64",
+          "spectrum": "#6cbd45",
+          "hue": "Yellow",
+          "percent": 0.1513793103448276,
+          "css3": "#808080"
+        },
+        {
+          "color": "#af967d",
+          "spectrum": "#c25687",
+          "hue": "Brown",
+          "percent": 0.1414942528735632,
+          "css3": "#bc8f8f"
+        },
+        {
+          "color": "#4b4b4b",
+          "spectrum": "#3db657",
+          "hue": "Grey",
+          "percent": 0.1385632183908046,
+          "css3": "#2f4f4f"
+        },
+        {
+          "color": "#c8c8af",
+          "spectrum": "#b55592",
+          "hue": "Green",
+          "percent": 0.06701149425287356,
+          "css3": "#c0c0c0"
+        },
+        {
+          "color": "#e1c8c8",
+          "spectrum": "#c15689",
+          "hue": "Orange",
+          "percent": 0.05775862068965517,
+          "css3": "#d8bfd8"
+        },
+        {
+          "color": "#c87d64",
+          "spectrum": "#e66c64",
+          "hue": "Orange",
+          "percent": 0.056264367816091954,
+          "css3": "#cd5c5c"
+        },
+        {
+          "color": "#c8af96",
+          "spectrum": "#e66c64",
+          "hue": "Brown",
+          "percent": 0.04442528735632184,
+          "css3": "#d2b48c"
+        },
+        {
+          "color": "#e1e1e1",
+          "spectrum": "#955ba5",
+          "hue": "Grey",
+          "percent": 0.044137931034482755,
+          "css3": "#dcdcdc"
+        },
+        {
+          "color": "#32324b",
+          "spectrum": "#4f6fb6",
+          "hue": "Blue",
+          "percent": 0.034195402298850576,
+          "css3": "#2f4f4f"
+        }
+      ],
+      "provenance": "[Popli Brothers], Apollo Bunder Road, Bombay (Mumbai) (December 29, 1953). Purchase by L.C. and P. Wyman, American couple; gift to Art Complex Museum, 189 Alden Street, Duxbury (1960s); purchase by Kathy Burton Jones [Norman Hurst], Hurst Gallery, 53 Mount Auburn Street, Cambridge (2004); gift to Harvard Art Museum (2009).",
+      "groupcount": 0,
+      "dated": "19th century",
+      "department": "Department of Islamic & Later Indian Art",
+      "dateend": 1900,
+      "url": "https://www.harvardartmuseums.org/collections/object/330740",
+      "dateoffirstpageview": "2010-01-13",
+      "century": "19th century",
+      "objectnumber": "2009.120",
+      "labeltext": null,
+      "datebegin": 1800,
+      "culture": "Indian",
+      "exhibitioncount": 1,
+      "imagepermissionlevel": 0,
+      "mediacount": 0,
+      "objectid": 330740,
+      "techniqueid": null,
+      "dimensions": "18.4 x 13.9 cm (7 1/4 x 5 1/2 in.)",
+      "seeAlso": [
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/330740",
+          "type": "IIIF Manifest",
+          "format": "application/json",
+          "profile": "http://iiif.io/api/presentation/2/context.json"
+        }
+      ]
+    },
+    {
+      "copyright": null,
+      "contextualtextcount": 0,
+      "creditline": "Harvard Art Museums/Arthur M. Sackler Museum, Bequest of Thomas Whittemore",
+      "accesslevel": 1,
+      "dateoflastpageview": "2021-04-06",
+      "classificationid": 50,
+      "division": "Asian and Mediterranean Art",
+      "markscount": 0,
+      "publicationcount": 0,
+      "totaluniquepageviews": 9,
+      "contact": "am_asianmediterranean@harvard.edu",
+      "colorcount": 0,
+      "rank": 74870,
+      "details": {
+        "coins": {
+          "reverseinscription": null,
+          "dieaxis": null,
+          "metal": "AE",
+          "obverseinscription": null,
+          "denomination": null,
+          "dateonobject": null
+        }
+      },
+      "state": null,
+      "id": 74580,
+      "verificationleveldescription": "Adequate. Object is adequately described but information may not be vetted",
+      "period": "Byzantine period, Middle",
+      "images": [
+        {
+          "date": "2005-02-24",
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 61418,
+          "idsid": 43342833,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": null,
+          "renditionnumber": "COIN12099",
+          "displayorder": 1,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:COIN12099_dlvr",
+          "alttext": null,
+          "width": 1024,
+          "publiccaption": null,
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/43342833",
+          "height": 478
+        }
+      ],
+      "worktypes": [
+        {
+          "worktypeid": "103",
+          "worktype": "coin"
+        }
+      ],
+      "imagecount": 1,
+      "totalpageviews": 10,
+      "accessionyear": 1951,
+      "standardreferencenumber": null,
+      "signed": null,
+      "classification": "Coins",
+      "relatedcount": 0,
+      "verificationlevel": 2,
+      "primaryimageurl": "https://nrs.harvard.edu/urn-3:HUAM:COIN12099_dlvr",
+      "titlescount": 1,
+      "peoplecount": 1,
+      "style": null,
+      "lastupdate": "2021-11-17T04:24:01-0500",
+      "commentary": null,
+      "periodid": 6322,
+      "technique": "Struck",
+      "edition": null,
+      "description": null,
+      "medium": "Bronze",
+      "lendingpermissionlevel": 0,
+      "title": "Coin of Constantine IX",
+      "accessionmethod": "Bequest",
+      "provenance": null,
+      "groupcount": 0,
+      "dated": "11th century",
+      "department": "Department of Ancient and Byzantine Art & Numismatics",
+      "dateend": 0,
+      "people": [
+        {
+          "role": "Coin Constituent",
+          "birthplace": null,
+          "gender": "unknown",
+          "displaydate": "r. 1042 - 1055",
+          "prefix": null,
+          "culture": "Byzantine",
+          "displayname": "Constantine IX",
+          "alphasort": "Constantine IX",
+          "name": "Constantine IX",
+          "personid": 22501,
+          "deathplace": null,
+          "displayorder": 1
+        }
+      ],
+      "url": "https://www.harvardartmuseums.org/collections/object/74580",
+      "dateoffirstpageview": "2011-02-21",
+      "century": "11th century",
+      "objectnumber": "1951.31.4.1584",
+      "labeltext": null,
+      "datebegin": 0,
+      "culture": "Byzantine",
+      "exhibitioncount": 0,
+      "imagepermissionlevel": 0,
+      "mediacount": 0,
+      "objectid": 74580,
+      "techniqueid": 7320,
+      "dimensions": "3.05 g",
+      "seeAlso": [
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/74580",
+          "type": "IIIF Manifest",
+          "format": "application/json",
+          "profile": "http://iiif.io/api/presentation/2/context.json"
+        }
+      ]
+    },
+    {
+      "copyright": null,
+      "contextualtextcount": 0,
+      "creditline": "Harvard Art Museums/Arthur M. Sackler Museum, Bequest of Thomas Whittemore",
+      "accesslevel": 1,
+      "dateoflastpageview": null,
+      "classificationid": 50,
+      "division": "Asian and Mediterranean Art",
+      "markscount": 0,
+      "publicationcount": 0,
+      "totaluniquepageviews": 0,
+      "contact": "am_asianmediterranean@harvard.edu",
+      "colorcount": 0,
+      "rank": 75049,
+      "details": {
+        "coins": {
+          "reverseinscription": null,
+          "dieaxis": null,
+          "metal": "AE",
+          "obverseinscription": null,
+          "denomination": null,
+          "dateonobject": null
+        }
+      },
+      "state": null,
+      "id": 74658,
+      "verificationleveldescription": "Unchecked. Object information has not been verified for completeness and has not been vetted",
+      "period": "Byzantine period",
+      "images": [
+        {
+          "date": "2005-02-22",
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 61385,
+          "idsid": 43342678,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": null,
+          "renditionnumber": "COIN11940",
+          "displayorder": 1,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:COIN11940_dlvr",
+          "alttext": null,
+          "width": 1024,
+          "publiccaption": null,
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/43342678",
+          "height": 478
+        }
+      ],
+      "worktypes": [
+        {
+          "worktypeid": "103",
+          "worktype": "coin"
+        }
+      ],
+      "imagecount": 1,
+      "totalpageviews": 0,
+      "accessionyear": 1951,
+      "standardreferencenumber": null,
+      "signed": null,
+      "classification": "Coins",
+      "relatedcount": 0,
+      "verificationlevel": 0,
+      "primaryimageurl": "https://nrs.harvard.edu/urn-3:HUAM:COIN11940_dlvr",
+      "titlescount": 1,
+      "peoplecount": 1,
+      "style": null,
+      "lastupdate": "2021-11-17T04:24:01-0500",
+      "commentary": null,
+      "periodid": 374,
+      "technique": "Struck",
+      "edition": null,
+      "description": null,
+      "medium": "Bronze",
+      "lendingpermissionlevel": 0,
+      "title": "Coin of Manuel I",
+      "accessionmethod": "Bequest",
+      "provenance": null,
+      "groupcount": 0,
+      "dated": "12th century",
+      "department": "Department of Ancient and Byzantine Art & Numismatics",
+      "dateend": 0,
+      "people": [
+        {
+          "role": "Coin Constituent",
+          "birthplace": null,
+          "gender": "unknown",
+          "displaydate": "r. 1143 -1180",
+          "prefix": null,
+          "culture": "Byzantine",
+          "displayname": "Manuel I",
+          "alphasort": "Manuel I",
+          "name": "Manuel I",
+          "personid": 20905,
+          "deathplace": null,
+          "displayorder": 1
+        }
+      ],
+      "url": "https://www.harvardartmuseums.org/collections/object/74658",
+      "dateoffirstpageview": null,
+      "century": "12th century",
+      "objectnumber": "1951.31.4.1763",
+      "labeltext": null,
+      "datebegin": 0,
+      "culture": "Byzantine",
+      "exhibitioncount": 0,
+      "imagepermissionlevel": 0,
+      "mediacount": 0,
+      "objectid": 74658,
+      "techniqueid": 7320,
+      "dimensions": "3.25 g",
+      "seeAlso": [
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/74658",
+          "type": "IIIF Manifest",
+          "format": "application/json",
+          "profile": "http://iiif.io/api/presentation/2/context.json"
+        }
+      ]
+    },
+    {
+      "copyright": null,
+      "contextualtextcount": 0,
+      "creditline": "Harvard Art Museums/Arthur M. Sackler Museum, Bequest of Thomas Whittemore",
+      "accesslevel": 1,
+      "dateoflastpageview": "2021-05-13",
+      "classificationid": 50,
+      "division": "Asian and Mediterranean Art",
+      "markscount": 0,
+      "publicationcount": 0,
+      "totaluniquepageviews": 3,
+      "contact": "am_asianmediterranean@harvard.edu",
+      "colorcount": 0,
+      "rank": 74829,
+      "details": {
+        "coins": {
+          "reverseinscription": "No inscr. In field, MP ThetaV (both overlined)",
+          "dieaxis": null,
+          "metal": "AE",
+          "obverseinscription": "No inscr. In field, IC XC (both overlined).",
+          "denomination": "follis",
+          "dateonobject": null
+        }
+      },
+      "state": null,
+      "id": 74734,
+      "verificationleveldescription": "Adequate. Object is adequately described but information may not be vetted",
+      "period": "Byzantine period, Middle",
+      "images": [
+        {
+          "date": "2005-02-24",
+          "copyright": "President and Fellows of Harvard College",
+          "imageid": 43608,
+          "idsid": 43342872,
+          "format": "image/jpeg",
+          "description": null,
+          "technique": null,
+          "renditionnumber": "COIN12138",
+          "displayorder": 1,
+          "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:COIN12138_dlvr",
+          "alttext": null,
+          "width": 1024,
+          "publiccaption": null,
+          "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/43342872",
+          "height": 478
+        }
+      ],
+      "worktypes": [
+        {
+          "worktypeid": "103",
+          "worktype": "coin"
+        }
+      ],
+      "imagecount": 1,
+      "totalpageviews": 3,
+      "accessionyear": 1951,
+      "standardreferencenumber": "DOC 3.2, G.4 (p. 692)",
+      "signed": null,
+      "classification": "Coins",
+      "relatedcount": 0,
+      "verificationlevel": 2,
+      "primaryimageurl": "https://nrs.harvard.edu/urn-3:HUAM:COIN12138_dlvr",
+      "titlescount": 1,
+      "peoplecount": 1,
+      "style": null,
+      "lastupdate": "2021-11-17T04:24:01-0500",
+      "commentary": null,
+      "periodid": 6322,
+      "technique": "Struck",
+      "edition": null,
+      "description": "Obv.: Bust of Christ (Type IXa) facing, bearded, with cross nimbus, wearing tunic and himation; r. hand blessing inwards in sling of cloak, scroll held in l. Border of large pellets.\r\n\r\nRev.: Bust of the Virgin facing, nimbate, orans, wearing tunic and maphorion. Border of large pellets.",
+      "medium": "Bronze",
+      "lendingpermissionlevel": 0,
+      "title": "Anonymous Follis",
+      "accessionmethod": "Bequest",
+      "provenance": null,
+      "groupcount": 0,
+      "dated": "1065- 1070 CE",
+      "department": "Department of Ancient and Byzantine Art & Numismatics",
+      "dateend": 1070,
+      "people": [
+        {
+          "role": "Coin Constituent",
+          "birthplace": null,
+          "gender": "unknown",
+          "displaydate": null,
+          "prefix": "Issued by",
+          "culture": null,
+          "displayname": "Issued by Anonymous Coin",
+          "alphasort": "Anonymous Coin",
+          "name": "Anonymous Coin",
+          "personid": 25306,
+          "deathplace": null,
+          "displayorder": 1
+        }
+      ],
+      "url": "https://www.harvardartmuseums.org/collections/object/74734",
+      "dateoffirstpageview": "2012-10-24",
+      "century": null,
+      "objectnumber": "1951.31.4.1543",
+      "labeltext": null,
+      "datebegin": 1065,
+      "culture": "Byzantine",
+      "exhibitioncount": 0,
+      "imagepermissionlevel": 0,
+      "mediacount": 0,
+      "objectid": 74734,
+      "techniqueid": 7320,
+      "dimensions": "10.21 g",
+      "seeAlso": [
+        {
+          "id": "https://iiif.harvardartmuseums.org/manifests/object/74734",
+          "type": "IIIF Manifest",
+          "format": "application/json",
+          "profile": "http://iiif.io/api/presentation/2/context.json"
+        }
+      ]
+    }
+  ]
 }
