@@ -10,7 +10,7 @@ function App() {
   const [artRecords, setArtRecords] = useState([]);
   const [visible, setVisible] = useState(incrementVisible)
   const [itemList, setItemList] = useState([]);
-  const [databaseConnected, setDatabaseConnected] = useState(false);
+  const [databaseConnected, setDatabaseConnected] = useState(true);
 
   useEffect(() => {
     fetch(`${BASE_URL}/object?hasimage=1&size=100&apikey=${API_KEY}`)
@@ -98,7 +98,7 @@ function App() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <Header />
+      <Header databaseConnected={databaseConnected} />
       <Filter
         handleCategoryChange={handleCategoryChange}
         handleFilterClick={handleFilterClick}

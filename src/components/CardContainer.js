@@ -4,7 +4,11 @@ import { nanoid } from 'nanoid'
 
 function CardContainer({ artInfo, artRecords, handleNext, databaseConnected }) {
     const artElements = artRecords?.map(record => {
-        return <ObjectCard key={nanoid()} record={record} databaseConnected={databaseConnected} />
+        return <ObjectCard
+            key={nanoid()}
+            record={record}
+            databaseConnected={databaseConnected}
+        />
     })
 
     return (
@@ -29,3 +33,4 @@ function CardContainer({ artInfo, artRecords, handleNext, databaseConnected }) {
 }
 
 export default CardContainer
+
