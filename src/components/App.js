@@ -100,6 +100,8 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setItemList([])
+        setArtRecords(() => data.records);
+        setArtInfo(() => data.info)
         setVisible(incrementVisible)
       });
   }
