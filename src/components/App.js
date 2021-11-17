@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { API_KEY, BASE_URL } from './API';
 import CardContainer from './CardContainer';
 import Filter from './Filter';
+
+import TopReturn from './TopReturn' ;
 import Header from './Header';
 
 function App() {
@@ -98,6 +100,7 @@ function App() {
 
   return (
     <div style={{ textAlign: "center" }}>
+      <h1>Harvard Art Museums</h1>
       <Header databaseConnected={databaseConnected} />
       <Filter
         handleCategoryChange={handleCategoryChange}
@@ -105,15 +108,18 @@ function App() {
         resetItems={resetItems}
         itemList={itemList}
         handleKeywordSearch={handleKeywordSearch}
-      />
+        />
       <CardContainer
         artInfo={artInfo}
         artRecords={visibleRecords}
         handleNext={handleNext}
         databaseConnected={databaseConnected}
-      />
+        />
+      <TopReturn/>
     </div>
   )
 }
 
 export default App;
+
+//`${BASE_URL}/object?hasimage=1&keyword=${SEARCH_STRING}&size=100&apikey=${API_KEY}`
