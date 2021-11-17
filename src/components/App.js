@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
+import { API_KEY, BASE_URL } from './API';
 import CardContainer from './CardContainer';
 import Filter from './Filter';
-import { API_KEY, BASE_URL } from './API';
 import Header from './Header';
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
   const [artRecords, setArtRecords] = useState([]);
   const [visible, setVisible] = useState(16)
   const [itemList, setItemList] = useState([]);
+  const [databaseConnected, setDatabaseConnected] = useState(false);
 
   useEffect(() => {
     fetch(`${BASE_URL}/object?hasimage=1&size=100&apikey=${API_KEY}`)
@@ -19,7 +20,7 @@ function App() {
           data.records.filter(
             record => record.primaryimageurl !== null && record.primaryimageurl !== undefined
           );
-        setArtRecords(records => [...workingRecords])
+        setArtRecords(records => [...workingRecords]);
       });
   }, [])
 
@@ -107,6 +108,7 @@ function App() {
         artInfo={artInfo}
         artRecords={visibleRecords}
         handleNext={handleNext}
+        databaseConnected={databaseConnected}
       />
     </div>
   )

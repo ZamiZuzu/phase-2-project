@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ObjectCard({ record }) {
+function ObjectCard({ record, databaseConnected }) {
     if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
 
     return (
@@ -13,10 +13,12 @@ function ObjectCard({ record }) {
                 <div className="objectnumber"><strong>Object Number:</strong> {record.objectnumber}</div>
                 <div className="description">{record.classification}</div>
             </div>
-            <div className="ui bottom attached button">
-                <i className="add icon"></i>
-                Add Favorite
-            </div>
+            {databaseConnected
+                ? <div className="ui bottom attached button">
+                    <i className="add icon"></i>
+                    Add Favorite
+                </div>
+                : null}
         </div>
 
     )
