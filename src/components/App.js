@@ -135,7 +135,6 @@ function App() {
       .then(responses => Promise.all(responses.map(res => res.json())))
       .then(data => {
         const records = data.map(item => item)
-        console.log(records)
         setArtRecords(records)
         setVisible(() => incrementVisible)
       })
