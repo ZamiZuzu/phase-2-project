@@ -158,6 +158,7 @@ function App() {
         handleFilterClick={handleFilterClick}
         resetItems={resetItems}
         itemList={itemList}
+        setItemList={setItemList}
         handleKeywordSearch={handleKeywordSearch}
         handleDisplayFavorites={handleDisplayFavorites}
         databaseConnected={databaseConnected}

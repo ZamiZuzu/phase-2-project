@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, handleKeywordSearch, handleDisplayFavorites, databaseConnected }) {
+function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, setItemList, handleKeywordSearch, handleDisplayFavorites, databaseConnected }) {
     const [activeBtn, setActiveBtn] = useState("object")
     const [search, setSearch] = useState("")
 
@@ -15,7 +15,10 @@ function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList,
 
     function onFilterClick(e) {
         const selection = e.target.name;
-        if (selection === "object") resetItems()
+        if (selection === activeBtn && itemList.length > 0) {
+            setItemList([])
+        }
+        else if (selection === "object") resetItems()
         else if (selection === "search") return handleKeywordSearch(search)
         else if (selection === "favorites") return handleDisplayFavorites()
         else handleFilterClick(selection)
