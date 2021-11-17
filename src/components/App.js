@@ -15,7 +15,10 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setArtInfo(information => data.info)
-        const workingRecords = data.records.filter(record => record.primaryimageurl !== null && record.primaryimageurl !== undefined)
+        const workingRecords =
+          data.records.filter(
+            record => record.primaryimageurl !== null && record.primaryimageurl !== undefined
+          );
         setArtRecords(records => [...workingRecords])
       });
   }, [])
@@ -38,7 +41,10 @@ function App() {
       fetch(artInfo.next)
         .then(response => response.json())
         .then(data => {
-          const workingRecords = data.records.filter(record => record.primaryimageurl !== null && record.primaryimageurl !== undefined)
+          const workingRecords =
+            data.records.filter(
+              record => record.primaryimageurl !== null && record.primaryimageurl !== undefined
+            );
           const newData = [...artRecords, ...workingRecords]
           setArtRecords(() => newData)
           setArtInfo(() => data.info)
@@ -62,6 +68,20 @@ function App() {
       });
   }
 
+  function handleKeywordSearch(keyword) {
+    fetch(`${BASE_URL}/object?keyword=${keyword}&hasimage=1&size=100&apikey=${API_KEY}`)
+      .then(response => response.json())
+      .then(data => {
+        const workingRecords =
+          data.records.filter(
+            record => record.primaryimageurl !== null && record.primaryimageurl !== undefined
+          );
+        const newData = [...artRecords, ...workingRecords]
+        setArtRecords(data.records);
+        setArtInfo(data.info)
+      })
+  }
+
   function resetItems() {
     fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
       .then(response => response.json())
@@ -76,8 +96,18 @@ function App() {
   return (
     <div style={{ textAlign: "center" }}>
       <Header />
-      <Filter handleCategoryChange={handleCategoryChange} handleFilterClick={handleFilterClick} resetItems={resetItems} itemList={itemList} />
-      <CardContainer artInfo={artInfo} artRecords={visibleRecords} handleNext={handleNext} />
+      <Filter
+        handleCategoryChange={handleCategoryChange}
+        handleFilterClick={handleFilterClick}
+        resetItems={resetItems}
+        itemList={itemList}
+        handleKeywordSearch={handleKeywordSearch}
+      />
+      <CardContainer
+        artInfo={artInfo}
+        artRecords={visibleRecords}
+        handleNext={handleNext}
+      />
     </div>
   )
 }

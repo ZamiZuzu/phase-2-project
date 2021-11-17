@@ -10,11 +10,20 @@ function CardContainer({ artInfo, artRecords, handleNext }) {
     return (
         <div>
             <br />
-            <h2 className="ui header"><em>Showing {artRecords?.length} of {artInfo?.totalrecords} Works</em></h2>
+            <h2
+                className="ui header">
+                <em>Showing {artRecords?.length} of {artInfo?.totalrecords} Works</em>
+            </h2>
             <div className="ui four cards">
                 {artElements}
             </div>
-            <button className="ui primary button" onClick={() => handleNext()} style={{ marginTop: "15px" }}>Load More...</button>
+            {artRecords?.length >= artInfo?.totalrecords
+                ? null
+                : <button
+                    className="ui primary button"
+                    onClick={() => handleNext()}
+                    style={{ marginTop: "15px" }}
+                >Load More...</button>}
         </div>
     )
 }

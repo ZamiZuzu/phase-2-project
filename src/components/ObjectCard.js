@@ -1,7 +1,7 @@
 import React from 'react'
 
 function ObjectCard({ record }) {
-    // if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
+    if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
 
     return (
         <div className="ui card">
