@@ -1,49 +1,86 @@
-// import FilterSearch from "./FilterSearch";
-import { useState } from "react";
-import { API_KEY, BASE_URL } from "./API";
+import { useState } from 'react'
 
-function Filter({ handleFilterSelection, setArtData }) {
-    const [itemList, setItemList] = useState([]);
-
-    function handleFilterClick(category) {
-        fetch(`${BASE_URL}/${category}?&size=1000&apikey=${API_KEY}`)
-            .then(res => res.json())
-            .then(data => {
-                const unsortedList = data.records;
-                unsortedList.forEach(item => {
-                    item.parentCategory = category;
-                })
-                const sortedList = unsortedList.sort((a, b) => {
-                    return a.name.localeCompare(b.name);
-                });
-                setItemList(sortedList);
-            });
-    }
-
-    function resetItems() {
-        fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
-            .then(res => res.json())
-            .then(data => {
-                setArtData(data);
-                setItemList([])
-            });
-    }
+function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, handleKeywordSearch }) {
+    const [activeBtn, setActiveBtn] = useState("object")
+    const [search, setSearch] = useState("")
 
     const itemElements = itemList?.map(item => {
-        // console.log(item)
-        return <div className="column" key={item.id} style={{ cursor: "pointer" }} onClick={() => handleFilterSelection(item.parentCategory, item.id, item.name, setItemList)}>{item?.name}</div>
+        return <div
+            className="column"
+            key={item.id}
+            style={{ cursor: "pointer" }}
+            onClick={() => handleCategoryChange(item.parentCategory, item.id, item.name)}
+        >{item?.name}</div>
     })
 
+    function onFilterClick(e) {
+        const selection = e.target.name;
+        if (selection === "object") resetItems()
+        else if (selection === "search") return handleKeywordSearch(search)
+        else if (selection === "favorites") console.log("FAVORITES - NOT IMPLEMENTED")
+        else handleFilterClick(selection)
+        setActiveBtn(selection)
+    }
 
     return (
         <>
-            <div className="ui buttons">
-                <button className="ui button" onClick={resetItems} name="object">All Objects</button>
-                <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="classification">Classification</button>
-                <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="century">Century</button>
-                <button className="ui button" onClick={e => handleFilterClick(e.target.name)} name="gallery">Gallery</button>
-                <button className="ui button" name="">Favorites</button>
+            <div className="ui icon input" style={{ width: "300px" }}>
+                <input type="text"
+                    placeholder="Search..."
+                    onChange={e => setSearch(e.target.value)}
+                    value={search}
+                />
+                <i className="search icon"></i>
             </div>
+            <button
+                className="ui button"
+                name="search"
+                onClick={e => onFilterClick(e)}
+            >Search</button>
+            <br /><br />
+            <div className="ui buttons">
+                <button
+                    className={activeBtn === "object"
+                        ? "ui positive button"
+                        : "ui button"}
+
+                    onClick={e => onFilterClick(e)}
+                    name="object"
+                >All Objects</button>
+                <button
+                    className={activeBtn === "classification"
+                        ? "ui positive button"
+                        : "ui button"}
+
+                    onClick={e => onFilterClick(e)}
+                    name="classification"
+                >Classification</button>
+                <button
+                    className={activeBtn === "century"
+                        ? "ui positive button"
+                        : "ui button"}
+
+                    onClick={e => onFilterClick(e)}
+                    name="century"
+                >Century</button>
+                <button
+                    className={activeBtn === "gallery"
+                        ? "ui positive button"
+                        : "ui button"}
+
+                    onClick={e => onFilterClick(e)}
+                    name="gallery"
+                >Gallery</button>
+                <button
+                    className={activeBtn === "favorites"
+                        ? "ui positive button"
+                        : "ui button"}
+
+                    onClick={e => onFilterClick(e)}
+                    name="favorites"
+                >Favorites</button>
+            </div>
+            <br /><br />
             <div className="ui four column grid">
                 {itemElements ? itemElements : null}
             </div>

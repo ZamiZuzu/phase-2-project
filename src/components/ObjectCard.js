@@ -1,11 +1,7 @@
 import React from 'react'
-import * as image from '../images/placeholder.png'
 
-function ObjectCard({ record }) {
-    // console.log(record.primaryimageurl)
-    // console.log(typeof record.primaryimageurl)
-    if (record.primaryimageurl === undefined || record.primaryimageurl === null) record.primaryimageurl = image.default;
-    // if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
+function ObjectCard({ record, databaseConnected }) {
+    if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
 
     return (
         <div className="ui card">
@@ -17,10 +13,12 @@ function ObjectCard({ record }) {
                 <div className="objectnumber"><strong>Object Number:</strong> {record.objectnumber}</div>
                 <div className="description">{record.classification}</div>
             </div>
-            <div className="ui bottom attached button">
-                <i className="add icon"></i>
-                Add Favorite
-            </div>
+            {databaseConnected
+                ? <div className="ui bottom attached button">
+                    <i className="add icon"></i>
+                    Add Favorite
+                </div>
+                : null}
         </div>
 
     )
