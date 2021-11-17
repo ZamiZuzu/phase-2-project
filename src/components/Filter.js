@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, handleKeywordSearch, handleDisplayFavorites }) {
+function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, handleKeywordSearch, handleDisplayFavorites, databaseConnected }) {
     const [activeBtn, setActiveBtn] = useState("object")
     const [search, setSearch] = useState("")
 
@@ -75,14 +75,14 @@ function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList,
                     onClick={e => onFilterClick(e)}
                     name="gallery"
                 >Gallery</button>
-                <button
+                {databaseConnected ? <button
                     className={activeBtn === "favorites"
                         ? "ui positive button"
                         : "ui button"}
 
                     onClick={e => onFilterClick(e)}
                     name="favorites"
-                >Favorites</button>
+                >Favorites</button> : null}
             </div>
             <br /><br />
             <div className="ui four column grid">

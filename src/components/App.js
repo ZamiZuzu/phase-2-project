@@ -160,6 +160,7 @@ function App() {
         itemList={itemList}
         handleKeywordSearch={handleKeywordSearch}
         handleDisplayFavorites={handleDisplayFavorites}
+        databaseConnected={databaseConnected}
       />
       <br />
       <DetailDisplay record={currentSelection} />
