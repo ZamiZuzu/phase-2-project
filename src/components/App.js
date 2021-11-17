@@ -5,9 +5,10 @@ import Filter from './Filter';
 import Header from './Header';
 
 function App() {
+  const incrementVisible = 16;
   const [artInfo, setArtInfo] = useState([]);
   const [artRecords, setArtRecords] = useState([]);
-  const [visible, setVisible] = useState(16)
+  const [visible, setVisible] = useState(incrementVisible)
   const [itemList, setItemList] = useState([]);
   const [databaseConnected, setDatabaseConnected] = useState(false);
 
@@ -36,7 +37,7 @@ function App() {
   }
 
   function handleNext() {
-    setVisible(visible => visible + 6)
+    setVisible(visible => visible + incrementVisible)
     if (visible >= parseInt(artInfo.totalrecords)) return true;
     if (visible >= artRecords.length) {
       fetch(artInfo.next)
@@ -65,7 +66,7 @@ function App() {
           return a.name.localeCompare(b.name);
         });
         setItemList(sortedList);
-        setVisible(() => 16)
+        setVisible(() => incrementVisible)
       });
   }
 
@@ -80,15 +81,16 @@ function App() {
         const newData = [...artRecords, ...workingRecords]
         setArtRecords(data.records);
         setArtInfo(data.info)
+        setVisible(() => incrementVisible)
       })
   }
 
   function resetItems() {
-    fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
+    fetch(`${BASE_URL}/object?hasimage=1&size=incrementVisible&apikey=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
         setItemList([])
-        setVisible(16)
+        setVisible(incrementVisible)
       });
   }
 
