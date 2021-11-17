@@ -6,7 +6,8 @@ import { API_KEY, BASE_URL } from './API';
 function App() {
   const [artInfo, setArtInfo] = useState([]);
   const [artRecords, setArtRecords] = useState([]);
-  const [visible, setVisible] = useState(8)
+  const [visible, setVisible] = useState(16)
+  const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
     fetch(`${BASE_URL}/object?hasimage=1&size=100&apikey=${API_KEY}`)
@@ -14,15 +15,13 @@ function App() {
       .then(data => {
         setArtInfo(information => data.info)
         const workingRecords = data.records.filter(record => record.primaryimageurl !== null && record.primaryimageurl !== undefined)
-        // console.log("workingrecslength", workingRecords.length)
-        // console.log(workingRecords)
         setArtRecords(records => [...workingRecords])
       });
   }, [])
 
   function handleCategoryChange(category, id, name, size = 100) {
     console.log(category, id)
-    fetch(`${BASE_URL}/object?${category}=${category === 'century' ? name : id}&size=${size}&apikey=${API_KEY}`)
+    fetch(`${BASE_URL}/object?${category}=${category === 'century' ? name : id}&hasimage=1&size=${size}&apikey=${API_KEY}`)
       .then(res => res.json())
       .then(data => {
         console.log(data)
@@ -32,19 +31,13 @@ function App() {
   }
 
   function handleNext() {
-    // console.log(artInfo.next)
-    // console.log("artrecords.length", artRecords.length)
-    // console.log("visible", visible)
-    setVisible(visible => visible + 8)
+    setVisible(visible => visible + 6)
     if (visible >= parseInt(artInfo.totalrecords)) return true;
     if (visible >= artRecords.length) {
       fetch(artInfo.next)
         .then(res => res.json())
         .then(data => {
           const workingRecords = data.records.filter(record => record.primaryimageurl !== null && record.primaryimageurl !== undefined)
-          // if (workingRecords.length === 0)
-          // console.log("workingrecslength", workingRecords.length)
-          // console.log(workingRecords)
           const newData = [...artRecords, ...workingRecords]
           setArtRecords(() => newData)
           setArtInfo(() => data.info)
@@ -52,13 +45,39 @@ function App() {
     }
   }
 
+  function handleFilterClick(category) {
+    fetch(`${BASE_URL}/${category}?&size=1000&apikey=${API_KEY}`)
+      .then(res => res.json())
+      .then(data => {
+        const unsortedList = data.records;
+        unsortedList.forEach(item => {
+          item.parentCategory = category;
+        })
+        const sortedList = unsortedList.sort((a, b) => {
+          return a.name.localeCompare(b.name);
+        });
+        setItemList(sortedList);
+        setVisible(() => 16)
+      });
+  }
+
+  function resetItems() {
+    fetch(`${BASE_URL}/object?hasimage=1&size=16&apikey=${API_KEY}`)
+      .then(res => res.json())
+      .then(data => {
+        // setArtData(data);
+        setItemList([])
+        setVisible(16)
+      });
+  }
+
   const visibleRecords = artRecords.slice(0, visible)
 
   return (
     <div style={{ textAlign: "center" }}>
       <h1>Harvard Art Museums</h1>
-      <Filter handleCategoryChange={handleCategoryChange} />
-      <CardContainer artInfo={artInfo} artRecords={visibleRecords} setArtRecords={setArtRecords} handleNext={handleNext} visible={visible} />
+      <Filter handleCategoryChange={handleCategoryChange} handleFilterClick={handleFilterClick} resetItems={resetItems} itemList={itemList} />
+      <CardContainer artInfo={artInfo} artRecords={visibleRecords} handleNext={handleNext} />
     </div>
   )
 }
