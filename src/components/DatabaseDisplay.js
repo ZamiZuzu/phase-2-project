@@ -5,7 +5,7 @@ function DatabaseDisplay({ databaseConnected }) {
 
     return (
         <div
-            class="ui label"
+            className="ui label"
             style={{
                 position: 'fixed',
                 top: '0',
@@ -14,11 +14,11 @@ function DatabaseDisplay({ databaseConnected }) {
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}>
 
-            <i class="database icon"></i> {databaseConnected ? "Connected!" : "No connection to server!"}
-            {!databaseConnected && hover && <div class="ui red message">
+            <i className="database icon"></i> {databaseConnected ? "Connected!" : "No connection to server!"}
+            {!databaseConnected && hover && <div className="ui red message">
                 For full functionality, you must connect to the database.
             </div>}
-            {databaseConnected && hover && <div class="ui blue message">
+            {databaseConnected && hover && <div className="ui blue message">
                 Connection established successfully with json-server!
             </div>}
         </div>

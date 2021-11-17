@@ -19,7 +19,8 @@ function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList,
         else if (selection === "search") return handleKeywordSearch(search)
         else if (selection === "favorites") console.log("FAVORITES - NOT IMPLEMENTED")
         else handleFilterClick(selection)
-        setActiveBtn(selection)
+        setActiveBtn(() => selection)
+        setSearch(() => "")
     }
 
     return (
@@ -29,6 +30,9 @@ function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList,
                     placeholder="Search..."
                     onChange={e => setSearch(e.target.value)}
                     value={search}
+                    onKeyUp={e => {
+                        if (e.key === 'Enter') handleKeywordSearch(search)
+                    }}
                 />
                 <i className="search icon"></i>
             </div>

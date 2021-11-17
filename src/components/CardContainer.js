@@ -2,12 +2,15 @@ import React from 'react'
 import ObjectCard from './ObjectCard';
 import { nanoid } from 'nanoid'
 
-function CardContainer({ artInfo, artRecords, handleNext, databaseConnected }) {
+function CardContainer({ artInfo, artRecords, handleNext, databaseConnected, databaseRecords, handleAddFavorite, handleRemoveFavorite }) {
     const artElements = artRecords?.map(record => {
         return <ObjectCard
             key={nanoid()}
             record={record}
             databaseConnected={databaseConnected}
+            databaseRecords={databaseRecords}
+            handleAddFavorite={handleAddFavorite}
+            handleRemoveFavorite={handleRemoveFavorite}
         />
     })
 

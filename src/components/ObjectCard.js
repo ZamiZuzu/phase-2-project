@@ -1,7 +1,28 @@
 import React from 'react'
 
-function ObjectCard({ record, databaseConnected }) {
+function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavorite, handleRemoveFavorite }) {
     if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
+
+    function FavoriteButton() {
+        if (databaseConnected) {
+            if (databaseRecords.includes(record.id)) {
+                return (
+                    <div
+                        className="ui buttom attached button" onClick={() => handleRemoveFavorite(record.id)}>
+                        <i className="remove icon"></i>
+                        Remove from Favorites
+                    </div>)
+            } else {
+                return (
+                    <div className="ui bottom attached button" onClick={() => handleAddFavorite(record)}>
+                        <i className="add icon"></i>
+                        Add Favorite
+                    </div>
+                )
+            }
+        }
+        return null;
+    }
 
     return (
         <div className="ui card">
@@ -13,12 +34,13 @@ function ObjectCard({ record, databaseConnected }) {
                 <div className="objectnumber"><strong>Object Number:</strong> {record.objectnumber}</div>
                 <div className="description">{record.classification}</div>
             </div>
-            {databaseConnected
-                ? <div className="ui bottom attached button">
+            {/* {databaseConnected
+                ? <div className="ui bottom attached button" onClick={(e) => handleAddFavorite(e, record)}>
                     <i className="add icon"></i>
                     Add Favorite
                 </div>
-                : null}
+                : null} */}
+            <FavoriteButton />
         </div>
 
     )

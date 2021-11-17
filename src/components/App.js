@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { API_KEY, BASE_URL } from './API';
 import CardContainer from './CardContainer';
 import Filter from './Filter';
-
-import TopReturn from './TopReturn' ;
+import TopReturn from './TopReturn';
 import Header from './Header';
+const DB_URL = 'http://localhost:3000/saved_items'
 
 function App() {
   const incrementVisible = 16;
@@ -12,9 +12,19 @@ function App() {
   const [artRecords, setArtRecords] = useState([]);
   const [visible, setVisible] = useState(incrementVisible)
   const [itemList, setItemList] = useState([]);
-  const [databaseConnected, setDatabaseConnected] = useState(true);
+  const [databaseConnected, setDatabaseConnected] = useState(false);
+  const [databaseRecords, setDatabaseRecords] = useState([])
 
   useEffect(() => {
+    fetch(DB_URL)
+      .then(res => res.json())
+      .then(dbData => {
+        setDatabaseRecords(dbData.map(item => item.id))
+        setDatabaseConnected(true)
+        console.log(dbData)
+      })
+      .catch(err => setDatabaseConnected(false))
+
     fetch(`${BASE_URL}/object?hasimage=1&size=100&apikey=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
@@ -28,13 +38,12 @@ function App() {
   }, [])
 
   function handleCategoryChange(category, id, name, size = 100) {
-    console.log(category, id)
     fetch(`${BASE_URL}/object?${category}=${category === 'century' ? name : id}&hasimage=1&size=${size}&apikey=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
         setArtRecords(data.records);
         setArtInfo(data.info)
+        setItemList([])
       })
   }
 
@@ -88,7 +97,7 @@ function App() {
   }
 
   function resetItems() {
-    fetch(`${BASE_URL}/object?hasimage=1&size=incrementVisible&apikey=${API_KEY}`)
+    fetch(`${BASE_URL}/object?hasimage=1&size=${incrementVisible}&apikey=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
         setItemList([])
@@ -96,11 +105,37 @@ function App() {
       });
   }
 
+  function handleAddFavorite(object) {
+    fetch(DB_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(object)
+    })
+      .then(response => response.json())
+      .then(data => {
+        setDatabaseRecords([data.id, ...databaseRecords])
+      })
+  }
+
+  function handleRemoveFavorite(id) {
+    fetch(`${DB_URL}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => setDatabaseRecords(databaseRecords.filter(item => item !== id)))
+    // console.log(data)
+  }
+
+
   const visibleRecords = artRecords.slice(0, visible)
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Harvard Art Museums</h1>
       <Header databaseConnected={databaseConnected} />
       <Filter
         handleCategoryChange={handleCategoryChange}
@@ -108,18 +143,19 @@ function App() {
         resetItems={resetItems}
         itemList={itemList}
         handleKeywordSearch={handleKeywordSearch}
-        />
+      />
       <CardContainer
         artInfo={artInfo}
         artRecords={visibleRecords}
         handleNext={handleNext}
         databaseConnected={databaseConnected}
-        />
-      <TopReturn/>
+        databaseRecords={databaseRecords}
+        handleAddFavorite={handleAddFavorite}
+        handleRemoveFavorite={handleRemoveFavorite}
+      />
+      <TopReturn />
     </div>
   )
 }
 
 export default App;
-
-//`${BASE_URL}/object?hasimage=1&keyword=${SEARCH_STRING}&size=100&apikey=${API_KEY}`
