@@ -10,6 +10,7 @@ function CardContainer({ artInfo, artRecords, handleNext, databaseConnected }) {
             databaseConnected={databaseConnected}
         />
     })
+    console.log(artInfo)
 
     return (
         <div>

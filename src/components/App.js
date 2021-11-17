@@ -100,7 +100,6 @@ function App() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Harvard Art Museums</h1>
       <Header databaseConnected={databaseConnected} />
       <Filter
         handleCategoryChange={handleCategoryChange}
@@ -121,5 +120,3 @@ function App() {
 }
 
 export default App;
-
-//`${BASE_URL}/object?hasimage=1&keyword=${SEARCH_STRING}&size=100&apikey=${API_KEY}`
